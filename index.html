@@ -175,9 +175,10 @@
       }
 
       for (i = 0; i < column; i++) {
-        message_matrix[1][i] = char_to_int(message[i + column]);
         if (i + column >= message_length) {
           message_matrix[1][i] = char_to_int("x");
+        } else {
+          message_matrix[1][i] = char_to_int(message[i + column]);
         }
       }
       
