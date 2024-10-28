@@ -175,7 +175,7 @@ programa
 		determinant += char_to_int(key[0]) * char_to_int(key[3])
 		determinant -= char_to_int(key[1]) * char_to_int(key[2])
 
-		//Encontra-se o equivalente do determinante módulo charset
+		//Encontra-se o equivalente do determinante módulo char_size
 		inteiro R
 		R = absval(determinant) % char_size
 
@@ -195,7 +195,7 @@ programa
 		inverted_determinant = -1
 
 		//Encontra-se o inverso multipicativo do determinante
-		//módulo charset
+		//módulo char_size
 		inteiro i
 		para (i = 0; i < char_size; i++) {
 			se (absval(determinant * i) % char_size == 1) {
